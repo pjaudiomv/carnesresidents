@@ -3883,7 +3883,7 @@ a:hover {
 }
 .clearfix {
     overflow: auto;
-    zoom: 1;
+    transform: scale(1);
 }
 .extra-top {
     margin-top: 100px;

@@ -11,14 +11,12 @@ map = L.mapbox.map('imap', 'mapbox.streets', {
     'scrollWheelZoom' : 'center'
 }).setView([33.0565, -80.103917]);
 
-var filters = document.getElementById('legend-items');
-var checkboxes = document.getElementsByClassName('squared-checkbox');
 
 var layer = L.mapbox.featureLayer().addTo(map);
 map.on('click', function (e) {
     console.log(e.latlng);
 });
-var stamenLayer = L.tileLayer(DI.templateUri + '/img/imap/imap-cx-update/{z}/{x}/{y}.png',{
+var stamenLayer = L.tileLayer('https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/imap/imap-cx-update/{z}/{x}/{y}.png',{
     minZoom: 14,
     maxZoom: 19
 }).addTo(map);
@@ -46,22 +44,6 @@ if(typeof locations != 'undefined') {
     }
 }
 
-/*for (i = 0; i < homes.length; i++) {
-
-    /geoJson.features.push({
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [parseFloat(homes[i][2]), parseFloat(homes[i][1])]
-        },
-        "properties": {
-            "listing-type": 'available-homes',
-            "marker-color": '#b06a6a',
-            "pop-up": homes[i][4]
-        }
-    });
-}*/
-
 layer.setGeoJSON(geoJson);
 
 layer.on('click', function(e) {
@@ -74,11 +56,6 @@ layer.on('click', function(e) {
 });
 
 map.setZoom(17);
-
-//re-filter the markers when the form is changed
-filters.onchange = change;
-//initially trigger the filter
-change();
 
 function setMarkerColor(listingType) {
     var color = null;
@@ -110,29 +87,3 @@ function setMarkerColor(listingType) {
 
     return color;
 }
-
-function change() {
-    var on = [];
-    // Find all checkboxes that are checked and build a list of their values
-    for(var i = 0; i < checkboxes.length; i++) {
-        if(checkboxes[i].childNodes[1].checked) on.push(checkboxes[i].childNodes[1].name);
-    }
-    // The filter function takes a GeoJSON feature object
-    // and returns true to show it or false to hide it.
-    layer.setFilter(function (f) {
-        // check each marker's symbol to see if its value is in the list
-        // of symbols that should be on, stored in the 'on' array
-        return on.indexOf(f.properties["listing-type"]) !== -1;
-    });
-    return false;
-}
-
-jQuery(function ($) {
-
-    //iMap Legend
-    $('.legend-title').click(function(){
-        $('.legend-title').toggleClass('close');
-        $( "#legend-items" ).slideToggle( "slow", function() {
-          });
-    });
-});
