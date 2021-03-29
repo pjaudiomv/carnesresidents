@@ -1,0 +1,476 @@
+{
+  "groups": [
+    {
+      "id": "community-amenities",
+      "name": "Community Amenities"
+    },
+    {
+      "id": "neighborhoods",
+      "name": "Neighborhoods"
+    },
+    {
+      "id": "parks-lakes",
+      "name": "Parks &amp; Lakes"
+    },
+    {
+      "id": "real-estate",
+      "name": "Real Estate"
+    },
+    {
+      "id": "town-medical-office",
+      "name": "Town\/Medical\/Office"
+    }
+  ],
+  "markers": [
+    {
+      "title": "Painting With A Twist",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/03\/PaintingWithATwist.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/painting-with-a-twist\/",
+      "group": "town-medical-office",
+      "lat": "33.05748588012987",
+      "lng": "-80.09722687478586",
+      "notes": "This art studio offers easy-to-follow painting classes for groups and individuals of all ages. A great way for Carnes residents to tap into their creative sides!"
+    },
+    {
+      "title": "Carnes Nails",
+      "image": false,
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/carnes-nails\/",
+      "group": "town-medical-office",
+      "lat": "33.058054742212455",
+      "lng": "-80.09730664409234",
+      "notes": "Full-service manicures and pedicures right within the Carnes Crossroads community."
+    },
+    {
+      "title": "Azure Carnes Crossroads",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/03\/Azure-300x81.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/azure-carnes-crossroads\/",
+      "group": "town-medical-office",
+      "lat": "33.05833440791759",
+      "lng": "-80.09031189823368",
+      "notes": "Completed in 2021, Azure Carnes Crossroads is the newest apartment community at Carnes. Luxury amenities and bright, modern layouts are among the many highlights of this new place to call home at Carnes."
+    },
+    {
+      "title": "Pulte Homes Model Home",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2020\/12\/Pulte-Homes-2020-Regular-Logo-no-Tag-Vertical-TM-Color-Crp-300x300.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/pulte-homes-model-home\/",
+      "group": "real-estate",
+      "lat": "33.05589939349843",
+      "lng": "-80.11039093142078",
+      "notes": "Visit the Pulte Homes team and new furnished model home at 119 Philips Park Street."
+    },
+    {
+      "title": "Eastwood Homes Model Home",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2020\/12\/eastwood-logo-300x169.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/eastwood-homes-model-home\/",
+      "group": "real-estate",
+      "lat": "33.05500280704052",
+      "lng": "-80.10380877351565",
+      "notes": "Visit Eastwood's team and furnished Model Home at 507 Wodin Place."
+    },
+    {
+      "title": "Toll Brothers Model Home",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2020\/12\/TOL-49664_DigitalLogo_ALHB-blue-1-300x57.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/toll-brothers-model-home\/",
+      "group": "real-estate",
+      "lat": "33.05518265376119",
+      "lng": "-80.10379268026212",
+      "notes": "Visit the Toll Brothers team and furnished Model Home at 509 Wodin Place."
+    },
+    {
+      "title": "David Weekley Model Home",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2016\/01\/builder-davidweekley-300x79.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/david-weekley-model-home\/",
+      "group": "real-estate",
+      "lat": "33.0553085462491",
+      "lng": "-80.10374440050457",
+      "notes": "Visit the David Weekley Home team at their furnished Model Home at 511 Wodin Place."
+    },
+    {
+      "title": "Philips Park Playground",
+      "image": "",
+      "url": "",
+      "group": "community-amenities",
+      "lat": "33.05712047878764",
+      "lng": "-80.10856164806857",
+      "notes": "The towering and c."
+    },
+    {
+      "title": "Cuppa Mana",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/03\/Cuppa-Mana.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/cuppa-mana\/",
+      "group": "town-medical-office",
+      "lat": "33.05847370481684",
+      "lng": "-80.09839290441889",
+      "notes": "This local coffee shop offers specialty tea and coffee, all-day breakfast and lunch, frappes, bubble tea and more."
+    },
+    {
+      "title": "Mi Fiesta",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2020\/12\/LaFiesta-300x199.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/mi-fiesta\/",
+      "group": "town-medical-office",
+      "lat": "33.058226048282535",
+      "lng": "-80.09833180345538",
+      "notes": "This casual Mexican bar and restaurant offers fresh, delicious food, great margaritas and both indoor and outdoor seating. It quickly became a favorite spot for residents when it opened in 2020."
+    },
+    {
+      "title": "Refuel",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/03\/Refuel-300x300.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/refuel\/",
+      "group": "town-medical-office",
+      "lat": "33.059368",
+      "lng": "-80.097275",
+      "notes": "A step above typical convenience stores, Refuel markets offer exemplified service, elevated food options and thoughtful architecture and landscaping, making this the perfect fit for our community. Opening in 2021."
+    },
+    {
+      "title": "Proposed Berkeley County Public School Site",
+      "image": false,
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/proposed-berkeley-county-public-school-site\/",
+      "group": "community-amenities",
+      "lat": "33.066493",
+      "lng": "-80.099811",
+      "notes": "Developers at Carnes Crossroads are working with the Berkeley County School District to build a K-8 public school within the community."
+    },
+    {
+      "title": "Lowcountry Endoscopy Center",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/download.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/lowcountry-endoscopy-center\/",
+      "group": "town-medical-office",
+      "lat": "33.057199",
+      "lng": "-80.096507",
+      "notes": ""
+    },
+    {
+      "title": "Bellary Flats",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/05\/Bellary-Flats-300x208.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/bellary-flats\/",
+      "group": "town-medical-office",
+      "lat": "33.054331",
+      "lng": "-80.096946",
+      "notes": "Crafted with Lowcountry living in mind, Bellary Flats has knit together the perfect blend of comfort and style in this community of luxury apartments at Carnes Crossroads."
+    },
+    {
+      "title": "LowCountry Women&#8217;s Specialists",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/LCWS_Logo2018_600x429-300x215.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/lowcountry-womens-specialist\/",
+      "group": "town-medical-office",
+      "lat": "33.057958",
+      "lng": "-80.096160",
+      "notes": "For over\u00a025 years, more than 30,000 babies have been delivered by the expert doctors at\u00a0LowCountry Women\u2019s Specialists, a privately-run independent network of specialists that offers comprehensive OB\/GYN services."
+    },
+    {
+      "title": "Dunkin&#8217;",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/14_CupShow_NoLocal_thmb-300x225.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/dunkin-donuts-2\/",
+      "group": "town-medical-office",
+      "lat": "33.058411",
+      "lng": "-80.0966975",
+      "notes": "Dunkin'\u00ae\u00a0is the world's leading baked goods and coffee chain, serving more than 3 million customers each and every day worldwide. Their Carnes Crossroads location offers the company's most up-to-date interior, ordering and drive through service."
+    },
+    {
+      "title": "East Bay Deli",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/east-bay-deli-300x203.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/east-bay-deli\/",
+      "group": "town-medical-office",
+      "lat": "33.058231",
+      "lng": "-80.096952",
+      "notes": "Hungry? Looking for tasty deli\u00a0sandwiches? See why East Bay Deli was voted Charleston's best deli\u00a013 years in a row! They feature an extensive menu of sandwiches, salads, soups, baked potatoes and more."
+    },
+    {
+      "title": "Sherwin-Williams",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/logo-blue-300x195.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/sherwin-williams\/",
+      "group": "town-medical-office",
+      "lat": "33.058082",
+      "lng": "-80.097089",
+      "notes": "No matter where you are in the world or what surfaces you're painting or coating,\u00a0Sherwin-Williamsprovides innovative paint solutions that ensure your success."
+    },
+    {
+      "title": "Polly&#8217;s Fine Jewelry",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/PollysJewelry-Avatar_400x400-300x300.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/pollys-fine-jewelry\/",
+      "group": "town-medical-office",
+      "lat": "33.057481",
+      "lng": "-80.097445",
+      "notes": "Charleston's #1 local jeweler since 1986, featuring loose diamonds, Tacori, A. Jaffe, PANDORA, TAG Heuer, Michael Kors, Elle, Charleston Gate Jewelry &amp; more!"
+    },
+    {
+      "title": "Steel City Pizza",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/Steel-City-Pizza-300x300.jpeg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/steel-city-pizza\/",
+      "group": "town-medical-office",
+      "lat": "33.057781",
+      "lng": "-80.097313",
+      "notes": "Steel City Pizza Company was born in Pittsburgh but raised in Charleston. They have proudly served Charleston for over 13 years, and look forward to many more. Pittsburgh is their roots, but Charleston is their home. Come to experience Steel City Pizza and all they have to offer."
+    },
+    {
+      "title": "Physicians Footcare",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/physicians-footcare-300x96.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/physicians-footcare\/",
+      "group": "town-medical-office",
+      "lat": "33.056685",
+      "lng": "-80.100802",
+      "notes": "Not every foot is the same. Not every condition is the same. And not every patient is the same. That\u2019s why Physicians Footcare offers customized treatment plans tailored precisely to your specific situation."
+    },
+    {
+      "title": "Palmetto Eye Institute",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/Palmetto-Eye-Institute-300x218.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/palmetto-eye-institute\/",
+      "group": "town-medical-office",
+      "lat": "33.056830",
+      "lng": "-80.101063",
+      "notes": "You can trust your eyes are in good hands as at Palmetto Eye Institute. Dr. Itharat has performed thousands of successful surgical procedures, and restored vision to thousands of patients."
+    },
+    {
+      "title": "Phillips Park Neighborhood",
+      "image": false,
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/phillips-park-neighborhood-2\/",
+      "group": "neighborhoods",
+      "lat": "33.055577",
+      "lng": " -80.110848",
+      "notes": ""
+    },
+    {
+      "title": "Cox Orthodontics",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/Cox-Orthodontics-300x119.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/cox-orthodontics\/",
+      "group": "town-medical-office",
+      "lat": "33.056330",
+      "lng": "-80.101500",
+      "notes": "Cox Orthodontics provides patients of all ages with the very latest orthodontic treatment options, including Invisalign clear aligners and clear braces. Their office uses the most advanced computer technology including digital imaging and high-tech computer graphics."
+    },
+    {
+      "title": "Solomon Family Dentistry",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/solomon_family_transparent-e1528826645487.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/solomon-family-dentistry\/",
+      "group": "town-medical-office",
+      "lat": "33.056116",
+      "lng": "-80.101678",
+      "notes": "Since 1979, their practice has provided convenient and affordable dental care to the Summerville, Goose Creek, Moncks Corner, and surrounding Charleston areas. Solomon is a second generation\u00a0family dentistry office\u00a0dedicated to providing the best in dental care."
+    },
+    {
+      "title": "Roper St. Francis Physician Partners Primary Care",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2016\/02\/Roper-St-Francis-Logo-300x111.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/roper-st-francis-physician-partners-primary-care\/",
+      "group": "town-medical-office",
+      "lat": "33.055972",
+      "lng": "-80.100082",
+      "notes": "Roper St. Francis Physician Partners Primary Care has internal and family medicine doctors with locations throughout the Lowcountry. Their doctors are dedicated to providing patients with excellent primary care, from routine physical exams to acute illnesses to chronic illness management."
+    },
+    {
+      "title": "Carnes Crossroads Dental",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/Carnes-Crossroads-Dental-300x162.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/carnes-crossroads-dental-2\/",
+      "group": "town-medical-office",
+      "lat": "33.056322",
+      "lng": "-80.100090",
+      "notes": "At Carnes Crossroads Dental, dentistry is personal. Personalized dentistry is more than a nice tagline, it reflects their team\u2019s passion to really know and understand the people they serve in the greater Summerville area."
+    },
+    {
+      "title": "Summerville KinderCare",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/KinderCare-300x111.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/rainbow-child-care-center\/",
+      "group": "town-medical-office",
+      "lat": "33.055614",
+      "lng": "-80.100456",
+      "notes": "KinderCare offers quality childcare and education for young children in the heart of the Carnes Crossroads community."
+    },
+    {
+      "title": "MUSC Health",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2016\/06\/MUSC-Carnes-Crossroads-Web-300x199.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/musc-health\/",
+      "group": "town-medical-office",
+      "lat": "33.054852",
+      "lng": "-80.101114",
+      "notes": "Carnes Crossroads Primary Health is MUSC's Summerville area care team, specializing in family medicine (care for the whole family) and internal medicine (care for patients ages 18 and older). Patients will find thorough, accessible and complete medical care for acute illnesses, chronic diseases, and preventive health maintenance."
+    },
+    {
+      "title": "Sweetgrass Pediatrics",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/sg-logo.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/sweetgrass-pediatrics\/",
+      "group": "town-medical-office",
+      "lat": "33.055401",
+      "lng": "-80.102185",
+      "notes": "Sweetgrass Pediatrics provides an individualized approach to children's medical care by looking atat medical, psychosocial, environmental and community influences as they develop a care plan for each patient. \u00a0We coordinate referral sources and resources within our community to aid in the care of our patients."
+    },
+    {
+      "title": "Breastfeeding Center of Charleston",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/Breast-Feeding-Center-Charleston-300x114.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/breastfeeding-center-charleston\/",
+      "group": "town-medical-office",
+      "lat": "33.059468",
+      "lng": "-80.098661",
+      "notes": "The board-certified team of consultants at the Breastfeeding Center of Charleston are equipped to help new mothers manage their experience with breastfeeding."
+    },
+    {
+      "title": "Coastal Pediatrics",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/CoastalPediatrics-300x110.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/coastal-pediatrics\/",
+      "group": "town-medical-office",
+      "lat": "33.059572",
+      "lng": "-80.098878",
+      "notes": "A designated\u00a0Level 3 Patient Centered Medical Home, recognized for providing the highest level of care in the three-tiered quality grading system."
+    },
+    {
+      "title": "Low Country Rheumatology",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/LowCountryRheumatology-300x98.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/low-country-rheumatology\/",
+      "group": "town-medical-office",
+      "lat": "33.058962",
+      "lng": "-80.097791",
+      "notes": "Low Country Rheumatology is provides patients with timely, caring service of the highest quality. As Board Certified Rheumatologists with years of clinical experience, they are qualified to manage all connective tissue diseases including rheumatoid arthritis, systemic lupus, scleroderma, and vasculitis; all forms of arthritis including gout, pseudogout, and osteoarthritis; bone disorders such as osteoporosis; and musculoskeletal disorders."
+    },
+    {
+      "title": "Charleston GI",
+      "image": false,
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/charleston-gi\/",
+      "group": "town-medical-office",
+      "lat": "33.059179",
+      "lng": "-80.098214",
+      "notes": "Charleston Gastroenterology Specialists, Charleston Endoscopy Center and Summerville Endoscopy Center are dedicated to the diagnosis, treatment and prevention of diseases affecting the digestive system."
+    },
+    {
+      "title": "Charleston ENT &#038; Allergy",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/CharlestonENT-300x186.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/charleston-ent-allergy\/",
+      "group": "town-medical-office",
+      "lat": "33.058766",
+      "lng": "-80.098025",
+      "notes": "Charleston's largest private ENT practice. They diagnose and treat all ages for the full range of ear, nose, throat, and head and neck conditions. Whether you need relief for seasonal allergies or a rare condition, their team of board-certified specialists is dedicated to treating you with the highest possible level of care."
+    },
+    {
+      "title": "Smallcakes at Windmill Station",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2019\/02\/SmallcakesLogo_Low_res-300x257.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/smallcakes-windmill-station\/",
+      "group": "town-medical-office",
+      "lat": "33.05853173028085",
+      "lng": "-80.09827278409833",
+      "notes": "Smallcakes Cupcakery and Creamery is a cupcake and ice cream shop that uses creative flavors, quality ingredients and friendly service to provide the finest cupcake experience worthy of returning and recommending."
+    },
+    {
+      "title": "&#8216;The Boneyard&#8217; Dog Park",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/Dogs-of-Carnes-Crossroads-300x182.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/the-boneyard-dog-park\/",
+      "group": "community-amenities",
+      "lat": "33.053974",
+      "lng": "-80.105068",
+      "notes": "At Carnes Crossroads, we love our dogs and they love nothing better than a romp at the Dog Park. There are separate areas for small and large dogs, each equipped with a variety of agility obstacles, spacious runways and water stations."
+    },
+    {
+      "title": "Information Center",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/Model-Row_Sales-Center-300x200.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/sales-information-center\/",
+      "group": "real-estate",
+      "lat": "33.055401",
+      "lng": "-80.103770",
+      "notes": "If you\u2019d like to learn more about Carnes Crossroads, the Information Center is the place to start. Come grab a drink and a map, and chat with us about what's happening in the community! The Information Center is open seven days a week, with or without an appointment.\n\n&nbsp;"
+    },
+    {
+      "title": "Northwood Academy",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/WhyCarnes-08-300x150.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/northwood-academy\/",
+      "group": "town-medical-office",
+      "lat": "33.062823",
+      "lng": "-80.097906",
+      "notes": "Carnes Crossroads is proud to be home to Northwood Academy, one of the area\u2019s finest private schools. Serving grades K-12, the sprawling campus offers modern, state-of-the-art learning facilities, a new sports stadium and athletic fields."
+    },
+    {
+      "title": "Northwood Church",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/Northwood-Church-300x181.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/northwood-church\/",
+      "group": "town-medical-office",
+      "lat": "33.060890",
+      "lng": "-80.099354",
+      "notes": "The vibrant, interdenominational Northwood Church offers numerous faith-based programs including weekly worship services, ministry, community outreach and continuing studies."
+    },
+    {
+      "title": "Playground",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/Playground-300x223.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/playground\/",
+      "group": "community-amenities",
+      "lat": "33.054085",
+      "lng": "-80.103465",
+      "notes": "Fun for kids and parents alike, our playground is a great place for children and their families to gather and interact with friends and neighbors. Swings, slides, and a barn-themed playhouse provide hours of fun and exercise."
+    },
+    {
+      "title": "Roper St. Francis Berkeley Hospital &#038; Medical Center",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/Berkeley-Hospital-300x143.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/roper-st-francis-berkeley-hospital\/",
+      "group": "town-medical-office",
+      "lat": "33.068539",
+      "lng": "-80.095648",
+      "notes": "Charleston's leading healthcare provider chose Carnes Crossroads as the location for the first full-service hospital in Berkeley County. Berkeley Hospital is located on a 90-acre medical campus that also includes a medical office building. The 50-bed hospital includes an emergency department, maternity and surgical services, radiology and imaging and more. It opened in 2019."
+    },
+    {
+      "title": "St. James Lake",
+      "image": false,
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/st-james-lake\/",
+      "group": "parks-lakes",
+      "lat": "33.059386",
+      "lng": "-80.101904",
+      "notes": " This beautiful freshwater lake is located in St. James Park and features the first of many waterfront properties in Carnes Crossroads. Manicured walking and biking trails provide access for all community residents."
+    },
+    {
+      "title": "St. James Park Neighborhood",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/St.-James-Park-300x213.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/st-james-park-neighborhood\/",
+      "group": "neighborhoods",
+      "lat": "33.059205",
+      "lng": " -80.108016",
+      "notes": "The second Carnes Crossroads neighborhood, centrally located St. James Park features beautiful St. James Lake, waterfront homes, and many of the community\u2019s most scenic trails. "
+    },
+    {
+      "title": "St. Thomas Park Neighborhood",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/St.-Thomas-Park-300x200.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/st-thomas-park-neighborhood\/",
+      "group": "neighborhoods",
+      "lat": "33.056614",
+      "lng": "-80.104134",
+      "notes": "The first neighborhood at Carnes Crossroads, St. Thomas Park is a short walk or bike ride from many of the community\u2019s amenities such as the pool, playground, Green Barn, and Village Green."
+    },
+    {
+      "title": "Swimming Pool",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/Pool-300x200.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/swimming-pool\/",
+      "group": "community-amenities",
+      "lat": "33.054541",
+      "lng": "-80.102901",
+      "notes": "There\u2019s no better place to spend a hot Lowcountry afternoon with family and friends. A center of social activity for the community, the 25-meter pool features lap lanes, a beach entry area and a Splash Zone for the kids."
+    },
+    {
+      "title": "The Blake at Carnes Crossroads",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/The-Blake-Carnes-Crossroads-300x181.jpeg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/blake-carnes-crossroads\/",
+      "group": "town-medical-office",
+      "lat": "33.059806",
+      "lng": "-80.099644",
+      "notes": "This upscale, assisted living facility provides an atmosphere of social interaction and life enrichment, with just the right amount of support. A variety of suites, programs and services of all kinds are tailored to the individual needs of each resident. "
+    },
+    {
+      "title": "The Green Barn",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/Green-Barn-300x211.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/the-green-barn\/",
+      "group": "community-amenities",
+      "lat": "33.054907",
+      "lng": "-80.102608",
+      "notes": "A well-known area landmark, the Green Barn is a symbol of the Carnes Crossroads community. Originally built on the property in the 1930\u2019s, it has been lovingly restored and now serves as an open-air gathering place for residents. It can also be rented for private events."
+    },
+    {
+      "title": "The Passage Apartments",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/The-Passage-300x150.jpg",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/the-passage-apartments\/",
+      "group": "town-medical-office",
+      "lat": "33.0573457",
+      "lng": "-80.094896",
+      "notes": "The Passage Apartments offer luxury living, a sense of community and\u00a0modern conveniences while retaining a home-like feel. Community amenities include a resort-style saltwater pool, cabana area, and a fitness center and yoga room.\u00a0"
+    },
+    {
+      "title": "Village Green",
+      "image": "https:\/\/www.carnescrossroads.com\/wp-content\/uploads\/2021\/02\/Village-Green-300x200.png",
+      "url": "https:\/\/www.carnescrossroads.com\/point_of_interest\/village-green\/",
+      "group": "parks-lakes",
+      "lat": "33.055267",
+      "lng": "-80.103262",
+      "notes": "Located in the heart of the St. Thomas Park neighborhood, the Village Green is an ideal spot for a family picnic, flying a kite, or a stroll after dinner. Due to its spaciousness and centralized location, it plays host to various outdoor events and gatherings held throughout the year."
+    }
+  ]
+}

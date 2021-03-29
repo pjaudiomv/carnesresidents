@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Map of Carnes Crossroads | Summerville, SC</title>
+    <link rel='dns-prefetch' href='//ajax.googleapis.com' />
+    <link rel='stylesheet' id='carnes-crossroads-style-css'  href='app.min.css' media='all' />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' id='jquery-js'></script>
+</head>
+
+<body class="page-template-default page page-id-23320 no-js page-map">
+
+<main id="content">
+    <div class="rusl-map  pad--full--medium">
+        <div class="block block__map" style="position:relative;width:100%;">
+            <div data-map id="map-canvas" data-zoom="16" style="padding-bottom:50%;"></div>
+        </div>
+        <form data-map-filters class="rusl-form">
+            <h4 class="is-open" data-map-filters-toggle>Filter Map By Points of Interest</h4>
+            <div data-map-filters-list>
+                <ul>
+                    <li class="checkbox">
+                        <input
+                                name="poi[]"
+                                id="community-amenities"
+                                value="community-amenities"
+                                type="checkbox"
+                                checked >
+                        <label for="community-amenities">Community Amenities</label>
+                    </li>
+                    <li class="checkbox">
+                        <input
+                                name="poi[]"
+                                id="neighborhoods"
+                                value="neighborhoods"
+                                type="checkbox"
+                                checked >
+                        <label for="neighborhoods">Neighborhoods</label>
+                    </li>
+                    <li class="checkbox">
+                        <input
+                                name="poi[]"
+                                id="parks-lakes"
+                                value="parks-lakes"
+                                type="checkbox"
+                                checked >
+                        <label for="parks-lakes">Parks &amp; Lakes</label>
+                    </li>
+                    <li class="checkbox">
+                        <input
+                                name="poi[]"
+                                id="real-estate"
+                                value="real-estate"
+                                type="checkbox"
+                                checked >
+                        <label for="real-estate">Real Estate</label>
+                    </li>
+                    <li class="checkbox">
+                        <input
+                                name="poi[]"
+                                id="town-medical-office"
+                                value="town-medical-office"
+                                type="checkbox"
+                                checked >
+                        <label for="town-medical-office">Town/Medical/Office</label>
+                    </li>
+                </ul>
+            </div>`
+        </form>
+        <style>
+            #map {
+                width: 100%;
+                height: 500px;
+                max-width: 1170px;
+            }
+        </style>
+        <script src="map.js" defer ></script>
+        <hr class="hr hr--pure-white hr--bold hr--hairline-bottom">
+
+</main>
+<script src='i18n.min.js' id='wp-i18n-js'></script>
+<script>
+    jQuery('#property-search [name="order"]').on('change', function(){
+        jQuery('#property-search').submit();
+    });
+</script>
+</body>
+</html>
