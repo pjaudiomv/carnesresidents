@@ -181,9 +181,9 @@ var googleMap = {
 			map: self.map,
 			position: position,
 			icon: {//...self.icons[group],
-				size: new google.maps.Size(20,35),
+				size: new google.maps.Size(40,70),
 				origin: new google.maps.Point(0,0),
-				anchor: new google.maps.Point(10,35)}, // use generic pin if group doesn't exist
+				anchor: new google.maps.Point(20,70)}, // use generic pin if group doesn't exist
 			group: group
 		});
 		var html = `
