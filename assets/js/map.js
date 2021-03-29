@@ -180,7 +180,7 @@ var googleMap = {
 		var marker = new google.maps.Marker({
 			map: self.map,
 			position: position,
-			icon: {...self.icons[group],
+			icon: {//...self.icons[group],
 				size: new google.maps.Size(20,35),
 				origin: new google.maps.Point(0,0),
 				anchor: new google.maps.Point(10,35)}, // use generic pin if group doesn't exist
