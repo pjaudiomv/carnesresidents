@@ -67,6 +67,7 @@ var googleMap = {
 		self.infoWindow = new google.maps.InfoWindow();
 
 		// self.resizeListener();
+		//self.clickListener();
 		var bounds = new google.maps.LatLngBounds(
 			new google.maps.LatLng(33.050528, -80.118405),
 			new google.maps.LatLng(33.070764, -80.087128)
@@ -121,6 +122,7 @@ var googleMap = {
 
 	/**
 	 * Asynchronos load of the api, call initialize after load
+	 *
 	 */
 	loadMap: function (json_file_path) {
 
@@ -184,6 +186,7 @@ var googleMap = {
 				size: new google.maps.Size(40,70),
 				origin: new google.maps.Point(0,0),
 				anchor: new google.maps.Point(20,70)}, // use generic pin if group doesn't exist
+
 			group: group
 		});
 		var html = `
@@ -256,11 +259,19 @@ var googleMap = {
 
 		var bounds = new google.maps.LatLngBounds();
 		for (var i=0; i<self.markers.length; i++) {
-		    if(self.markers[i].getVisible()) {
-		        bounds.extend( self.markers[i].getPosition() );
-		    }
+			if(self.markers[i].getVisible()) {
+				bounds.extend( self.markers[i].getPosition() );
+			}
 		}
 		self.map.fitBounds(bounds);
+	},
+
+	clickListener: function() {
+
+		self.map.addListener("click", (mapsMouseEvent) => {
+			// Close the current InfoWindow.
+			console.log(JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2))
+		});
 	}
 }
 
