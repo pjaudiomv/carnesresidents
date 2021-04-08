@@ -248,6 +248,15 @@
       "notes": ""
     },
     {
+      "title": "622 Van Buren Drive",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.056037758800386,-80.10519608200072",
+      "group": "real-estate",
+      "lat": "33.056037758800386",
+      "lng": "-80.10519608200072",
+      "notes": ""
+    },
+    {
       "title": "121 Grimball St",
       "image": "",
       "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0579844,-80.1074387",
@@ -272,15 +281,6 @@
       "group": "real-estate",
       "lat": "33.0564693",
       "lng": "-80.1032267",
-      "notes": ""
-    },
-    {
-      "title": "111 Faulkner St",
-      "image": "",
-      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0566721,-80.1081596",
-      "group": "real-estate",
-      "lat": "33.0566721",
-      "lng": "-80.1081596",
       "notes": ""
     }
   ]

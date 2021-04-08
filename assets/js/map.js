@@ -106,7 +106,7 @@ var googleMap = {
 			self.buildMarkersFromJSON(function () {
 				// Filter markers on groups
 				self.toggleFilters();
-				// self.fitBoundsToVisibleMarkers();
+				self.fitBoundsToVisibleMarkers();
 				$('[data-map-filters] input[type=checkbox]').change(function (e) {
 					self.toggleFilters();
 					self.fitBoundsToVisibleMarkers();
