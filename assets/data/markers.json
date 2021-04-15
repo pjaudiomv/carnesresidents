@@ -149,6 +149,15 @@
       "notes": ""
     },
     {
+      "title": "307 Ashby St",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0577662,-80.1028473",
+      "group": "real-estate",
+      "lat": "33.0577662",
+      "lng": "-80.1028473",
+      "notes": ""
+    },
+    {
       "title": "326 Ashby St",
       "image": "",
       "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0585012,-80.1052338",
@@ -227,6 +236,15 @@
       "group": "real-estate",
       "lat": "33.0571234",
       "lng": "-80.1016614",
+      "notes": ""
+    },
+    {
+      "title": "117 Parish Farms Drive",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0561855,-80.1023977",
+      "group": "real-estate",
+      "lat": "33.0561855",
+      "lng": "-80.1023977",
       "notes": ""
     },
     {
