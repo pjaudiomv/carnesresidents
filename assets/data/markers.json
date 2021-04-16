@@ -140,6 +140,15 @@
       "notes": ""
     },
     {
+      "title": "868 Carnes Crossing Blvd",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0579701,-80.1019659",
+      "group": "real-estate",
+      "lat": "33.0579701",
+      "lng": "-80.1019659",
+      "notes": ""
+    },
+    {
       "title": "301 Ashby St",
       "image": "",
       "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0577528,-80.1024302",
@@ -221,6 +230,15 @@
       "notes": ""
     },
     {
+      "title": "830 Buckler St",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0577246,-80.10521480000001",
+      "group": "real-estate",
+      "lat": "33.0577246",
+      "lng": "-80.10521480000001",
+      "notes": ""
+    },
+    {
       "title": "419 Eliston St",
       "image": "",
       "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.05693757656116,-80.10381817817688",
@@ -257,12 +275,39 @@
       "notes": ""
     },
     {
+      "title": "314 Parish Farms Drive",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0541073,-80.1060846",
+      "group": "real-estate",
+      "lat": "33.0541073",
+      "lng": "-80.1060846",
+      "notes": ""
+    },
+    {
+      "title": "322 Parish Farms Drive",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0541073,-80.1060846",
+      "group": "real-estate",
+      "lat": "33.0541073",
+      "lng": "-80.1060846",
+      "notes": ""
+    },
+    {
       "title": "343 Parish Farms Drive",
       "image": "",
       "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0538860371014,-80.11135754322724",
       "group": "real-estate",
       "lat": "33.0538860371014",
       "lng": "-80.11135754322724",
+      "notes": ""
+    },
+    {
+      "title": "357 Parish Farms Drive",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0562408,-80.1038615",
+      "group": "real-estate",
+      "lat": "33.0562408",
+      "lng": "-80.1038615",
       "notes": ""
     },
     {
@@ -317,6 +362,60 @@
       "group": "real-estate",
       "lat": "33.0564693",
       "lng": "-80.1032267",
+      "notes": ""
+    },
+    {
+      "title": "119 Faulkner St",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0566721,-80.1081596",
+      "group": "real-estate",
+      "lat": "33.0566721",
+      "lng": "-80.1081596",
+      "notes": ""
+    },
+    {
+      "title": "168 Hewitt St",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0550378,-80.10926719999999",
+      "group": "real-estate",
+      "lat": "33.0604887",
+      "lng": "-80.1078771",
+      "notes": ""
+    },
+    {
+      "title": "107 Hewitt St",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0550378,-80.10926719999999",
+      "group": "real-estate",
+      "lat": "33.0550378",
+      "lng": "-80.10926719999999",
+      "notes": ""
+    },
+    {
+      "title": "170 Hewitt St",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0604887,-80.1078771",
+      "group": "real-estate",
+      "lat": "33.0604887",
+      "lng": "-80.1078771",
+      "notes": ""
+    },
+    {
+      "title": "113 Bloomfield St",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0551852,-80.10825609999999",
+      "group": "real-estate",
+      "lat": "33.0551852",
+      "lng": "-80.10825609999999",
+      "notes": ""
+    },
+    {
+      "title": "519 Wodin Pl",
+      "image": "",
+      "url": "https:\/\/www.google.com\/maps\/search\/?api=1&query=33.0562408,-80.1038615",
+      "group": "real-estate",
+      "lat": "33.0562408",
+      "lng": "-80.1038615",
       "notes": ""
     }
   ]
