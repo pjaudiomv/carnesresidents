@@ -1,295 +1,36 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Carnes Crossroads Residents | Red Balloon Sale Map</title>
-    <meta name="description" content="Interactive map for Carnes Residents Red Balloon Sale"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
-    <link rel="apple-touch-icon" sizes="57x57" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://carnescharleston.com/wp-content/themes/carnes-crossroads-2015/img/favicons/favicon-16x16.png">
-
-    <style type="text/css">
-        .page-imap #imap .leaflet-top {
-            top: 10px !important;
-        }
-    </style>
-   <link rel='stylesheet' id='mapbox-css-css'  href='https://api.mapbox.com/mapbox.js/v3.0.0/mapbox.css?ver=5.0.9' type='text/css' media='all' />
-    <link rel='stylesheet' id='style-css-css'  href='https://www.carnesresidents.com/dew.css?ver=5.0.9' type='text/css' media='all' />
-
-    <link rel="icon" href="https://carnescharleston.com/wp-content/uploads/2016/05/cropped-carnes_logo_badge-300x300.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="https://carnescharleston.com/wp-content/uploads/2016/05/cropped-carnes_logo_badge-300x300.png" />
-
+    <meta charset="UTF-8">
+    <title>Community Map of Carnes Crossroads | Summerville, SC</title>
+    <link rel='dns-prefetch' href='//ajax.googleapis.com' />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' id='jquery-js'></script>
 </head>
-<body class="page-imap">
 
-<div id="o-wrapper" class="o-wrapper">
-    <div class="map-legend">
-        <div class="legend-title">Carnes Red Balloon Sale <a href="https://www.carnesresidents.com/carnes-red-balloon.pdf" target="_blank">(PDF)</a></div>
-    </div>
-    <div id="imap"></div>
-
-    <script>
-        if (typeof locations === 'undefined') locations = [];
-        locations.push([
-            "129 Callibluff Dr",
-            "",
-            '33.059723',
-            '-80.102607',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">129 Callibluff Dr</div>\n        <div class="listing-details">.\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "134 Callibluff Dr",
-            "",
-            '33.06021964931742',
-            '-80.10284185409547',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">134 Callibluff Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "169 Callibluff Dr",
-            "",
-            '33.061209',
-            '-80.105612',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">169 Callibluff Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "COOL * 535 Carnes Crossing Blvd",
-            "",
-            '33.057903',
-            '-80.102155',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">535 Carnes Crossing Blvd</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        // locations.push([
-        //     "209 Billinger Street",
-        //     "",
-        //     '33.05996787820659',
-        //     '-80.10382354259492',
-        //     'real_estate',
-        //     '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">209 Billinger Street</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        // ]);
-        locations.push([
-            "210 Billinger Street",
-            "",
-            '33.06007128428569',
-            '-80.10329246520998',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">210 Billinger Street</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "305 Marchman Street",
-            "",
-            '33.055948434748835',
-            '-80.10285258293153',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">305 Marchman Street</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "308 Marchman Street",
-            "",
-            '33.05646548753705',
-            '-80.10302424430849',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">308 Marchman Street</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "123 Callibluff Dr",
-            "",
-            '33.05923728831732',
-            '-80.10326564311983',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">123 Callibluff Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-
-        locations.push([
-            "103 Callibluff Dr",
-            "",
-            '33.059379',
-            '-80.10554',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">103 Callibluff Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "185 Callibluff Dr",
-            "",
-            '33.06140206472309',
-            '-80.10739624500276',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">185 Callibluff Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "150 Callibluff Dr",
-            "",
-            '33.06081985075735',
-            '-80.1040005683899',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">150 Callibluff Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "151 Hewitt St",
-            "",
-            '33.0589517946206',
-            '-80.1096573472023',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">151 Hewitt St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "121 Hewitt St",
-            "",
-            '33.056015876589086',
-            '-80.10934352874757',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">121 Hewitt St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "123 Grimball St",
-            "",
-            '33.05779182645548',
-            '-80.10725408792497',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">123 Grimball St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "328 Ashby St",
-            "",
-            '33.05858762021482',
-            '-80.10536313056947',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">328 Ashby St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "330 Ashby St",
-            "",
-            '33.058610100160024',
-            '-80.1056742668152',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">330 Ashby St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "331 Ashby St",
-            "",
-            '33.05807507590625',
-            '-80.10565817356111',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">331 Ashby St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "423 Ashby St",
-            "",
-            '33.06048490738733',
-            '-80.1062321662903',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">423 Ashby St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "419 Eliston St",
-            "",
-            '33.05693757656116',
-            '-80.10381817817688',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">419 Eliston St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "421 Eliston St",
-            "",
-            '33.05694656870848',
-            '-80.10409176349641',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">421 Eliston St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "804 Buckler St",
-            "",
-            '33.054680518536856',
-            '-80.10513246059419',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">804 Buckler St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "817 Buckler St",
-            "",
-            '33.056119287310445',
-            '-80.10575473308563',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">817 Buckler St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "809 Buckler St",
-            "",
-            '33.05508967079929',
-            '-80.10574936866762',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">809 Buckler St</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "314 Parish Farms Dr",
-            "",
-            '33.05448718219091',
-            '-80.10896801948549',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">314 Parish Farms Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "302 Parish Farms Dr",
-            "",
-            '33.054383769552516',
-            '-80.10811507701875',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">302 Parish Farms Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "310 Parish Farms Dr",
-            "",
-            '33.05446919739295',
-            '-80.10874271392824',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">310 Parish Farms Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "109 Parish Farms Dr",
-            "",
-            '33.05663184300583',
-            '-80.10208010673523',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">109 Parish Farms Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-        locations.push([
-            "103 Parish Farms Dr",
-            "",
-            '33.057148891780336',
-            '-80.10169923305513',
-            'real_estate',
-            '<div class="listing">\n        <div class="listing-details-col">\n        <div class="listing-neighborhood">103 Parish Farms Dr</div>\n        <div class="listing-details">\n                           </div>\n    </div>\n</div>'
-        ]);
-
-
-
-    </script>
-
-    <script>
-        if (typeof homes === 'undefined') homes = [];
-    </script>
-
+<body class="page-template-default page page-id-23320 no-js page-map">
+<div id="tallyBannerContainer" style="text-align: center; padding: 5px; color: #ff131d;">
+    Carnes Crossroads Red Balloon Sale <a href="https://www.carnesresidents.com/carnes-red-balloon.pdf" target="blank">(Download PDF Flyer)</a>
 </div>
+<div data-map id="map-canvas" data-zoom="16" style="padding-bottom:100%;  height: 100%;"></div>
 
-<script type='text/javascript' src='https://api.mapbox.com/mapbox.js/v3.0.0/mapbox.js?ver=5.0.9'></script>
-<script type='text/javascript' src='assets/js/imap.js?ver=9e93efs6fvx284883034e67afa4dsfed97cd5c86cd34531'></script>
+<style>
+#map-canvas {
+    height: 90%;
+}
+html, body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
+}
+h1, p, div {
+    margin: 0;
+    padding-bottom: 0;
+}
+</style>
 
+<script src="assets/js/map.js?v=2" defer ></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177806455-1"></script>
 <script>
@@ -299,6 +40,5 @@
 
     gtag('config', 'UA-177806455-1');
 </script>
-
 </body>
 </html>
