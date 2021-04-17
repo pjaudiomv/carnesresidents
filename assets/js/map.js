@@ -90,7 +90,7 @@ var googleMap = {
 				if (bounds.intersects(tileBounds) && (mapMinZoom <= zoom) && (zoom <= mapMaxZoom))
 					return 'images/map/2021-02-25/' + zoom + "/" + x + "/" + y + ".png";
 				else
-					return "https://www.maptiler.com/img/none.png";
+					return "images/blank.png";
 			},
 			tileSize: new google.maps.Size(256, 256),
 			isPng: true,
