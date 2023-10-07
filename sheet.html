@@ -17,7 +17,6 @@
     const API_KEY = "AIzaSyDolzT1yWJuPi6y3tP85fuh3JbPJfJnWeM"; // If using an API key. Optional and not recommended for frontend-only usage due to exposure risk.
 
     const URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
-
     function convertSheetDataToListOfDicts(sheetData) {
         if (!sheetData.values || sheetData.values.length === 0) {
             return [];
@@ -35,15 +34,15 @@
         });
     }
 
-    // Sample usage
-    fetch(URL)
-        .then(response => response.json())
-        .then(data => {
-            const listOfDicts = convertSheetDataToListOfDicts(data);
-            console.log(listOfDicts);
-        })
-        .catch(error => console.error('Error fetching data:', error));
-
+    function fetchGoogleSheetData() {
+        fetch(URL)
+            .then(response => response.json())
+            .then(data => {
+                const listOfDicts = convertSheetDataToListOfDicts(data);
+                console.log(listOfDicts);
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }
 </script>
 
 </body>
