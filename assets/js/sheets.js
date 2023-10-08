@@ -1,142 +1,121 @@
 const SHEET_ID = "1eNSh7TkObRNm_jlP_-7CSs9nQMcPElrZFMrfeC9R-ow";
-const SHEET_NAME = "events"; // Or whatever your sheet's name is
-const API_KEY = "AIzaSyDolzT1yWJuPi6y3tP85fuh3JbPJfJnWeM"; // If using an API key. Optional and not recommended for frontend-only usage due to exposure risk.
-
+const SHEET_NAME = "events";
+const API_KEY = "AIzaSyDolzT1yWJuPi6y3tP85fuh3JbPJfJnWeM";
 const URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_NAME}?key=${API_KEY}`;
-function renderDataAsTable(data) {
-    const container = document.getElementById("dataContainer");
-
-    // Create a table element
-    const table = document.createElement("table");
-    const thead = document.createElement("thead");
-    const tbody = document.createElement("tbody");
-
-    // Add headers to the table
-    const headers = Object.keys(data[0]);
-    const headerRow = document.createElement("tr");
-    headers.forEach(header => {
-        const th = document.createElement("th");
-        th.textContent = header;
-        headerRow.appendChild(th);
-    });
-    thead.appendChild(headerRow);
-
-    // Add data rows to the table
-    data.forEach(row => {
-        const tr = document.createElement("tr");
-        headers.forEach(header => {
-            const td = document.createElement("td");
-            td.textContent = row[header];
-            tr.appendChild(td);
-        });
-        tbody.appendChild(tr);
-    });
-
-    // Append everything to the table
-    table.appendChild(thead);
-    table.appendChild(tbody);
-
-    // Append the table to the container
-    container.appendChild(table);
-}
-
-function convertSheetDataToListOfDicts(sheetData) {
-    if (!sheetData.values || sheetData.values.length === 0) {
-        return [];
-    }
-
-    const headers = sheetData.values[0];
-    const rows = sheetData.values.slice(1);
-
-    return rows.map(row => {
-        let obj = {};
-        headers.forEach((header, index) => {
-            obj[header] = row[index];
-        });
-        return obj;
-    });
-}
-
 const ORIGINAL_MONTH_ORDER = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-function displayEventsByMonth(events) {
-    var monthOrder = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var currentEpoch = new Date().getTime();
-    var currentDate = new Date();
-    var currentMonth = monthOrder[currentDate.getMonth()];
-    var currentYear = currentDate.getFullYear();
-    var currentDay = currentDate.getDate();
-// Rearrange the monthOrder array to have the current month at the beginning
-    monthOrder = [currentMonth].concat(monthOrder.filter(month => month !== currentMonth));
+const convertSheetDataToListOfDicts = sheetData => {
+    const { values = [] } = sheetData;
+    const headers = values[0];
+    return values.slice(1).map(row => headers.reduce((acc, header, index) => ({ ...acc, [header]: row[index] }), {}));
+};
 
-    // Function to sort events by year, then by month, and then by day
-    events.sort((a, b) => {
-        if (a.year !== b.year) return a.year - b.year; // Oldest year first
-        if (ORIGINAL_MONTH_ORDER.indexOf(a.month) !== ORIGINAL_MONTH_ORDER.indexOf(b.month)) return ORIGINAL_MONTH_ORDER.indexOf(a.month) - ORIGINAL_MONTH_ORDER.indexOf(b.month);
-        return a.day - b.day;
-    });
-    var eventGroups = document.getElementById('eventGroups');
+const displayEventsByMonth = events => {
+    console.log(events)
+    const currentEpoch = Date.now();
+    const currentYear = new Date().getFullYear();
 
-    // Group by month and year
-    var groupedEvents = {};
-    events.forEach(event => {
-        if (eventToEpoch(event) < currentEpoch) {
-            return; // Don't display past events
-        }
-
-        var monthYearKey = `${event.month} - ${event.year}`;
-        if (!groupedEvents[monthYearKey]) {
-            groupedEvents[monthYearKey] = [];
-        }
-        groupedEvents[monthYearKey].push(event);
+    const validEvents = events.filter(event => {
+        return event.date && event.name &&
+            event.date.trim() !== "" && event.name.trim() !== "" &&
+            isValidDate(event.date);
     });
 
-    // Display events grouped by their respective months and years
-    for (var monthYearKey of Object.keys(groupedEvents).sort(sortMonthYearKeys)) {
-        var monthDiv = document.createElement('div');
-        var monthHeading = document.createElement('h2');
+    validEvents.sort((a, b) => {
+        const dateA = parseDate(a.date);
+        const dateB = parseDate(b.date);
+
+        if (dateA.year !== dateB.year) return dateA.year - dateB.year;
+        const monthIdxDiff = ORIGINAL_MONTH_ORDER.indexOf(dateA.month) - ORIGINAL_MONTH_ORDER.indexOf(dateB.month);
+        return monthIdxDiff || dateA.day - dateB.day;
+    });
+
+    const groupedEvents = validEvents.reduce((acc, event) => {
+        if (eventToEpoch(event) < currentEpoch) return acc;
+        const key = `${parseDate(event.date).month} ${parseDate(event.date).year > currentYear ? `- ${parseDate(event.date).year}` : ''}`;
+        acc[key] = acc[key] || [];
+        acc[key].push(event);
+        return acc;
+    }, {});
+
+    const eventGroups = document.getElementById('eventGroups');
+    Object.keys(groupedEvents).sort(sortMonthYearKeys).forEach(monthYearKey => {
+        const monthDiv = document.createElement('div');
+        const monthHeading = document.createElement('h2');
         monthHeading.textContent = monthYearKey;
         monthDiv.appendChild(monthHeading);
 
-        var ul = document.createElement('ul');
+        const ul = document.createElement('ul');
+        let previousEventDay = null;
+
         groupedEvents[monthYearKey].forEach(event => {
-            var li = document.createElement('li');
-            li.innerHTML = event.day + " - " + event.name;
+            const { day } = parseDate(event.date);
+
+            if (previousEventDay && (day - previousEventDay > 6)) {
+                const pBefore = document.createElement('p');
+                const hr = document.createElement('hr');
+                hr.className = 'weeks-hr';
+                const pAfter = document.createElement('p');
+                ul.appendChild(pBefore);
+                ul.appendChild(hr);
+                ul.appendChild(pAfter);
+            }
+
+            const li = document.createElement('li');
+            li.innerHTML = event.url?.trim() ? `${day} - <a href="${event.url}" target="_blank">${event.name}</a>` : `${day} - ${event.name}`;
             ul.appendChild(li);
+
+            previousEventDay = day;
         });
+
         monthDiv.appendChild(ul);
-
         eventGroups.appendChild(monthDiv);
+    });
+};
+
+const parseDate = dateStr => {
+    if (!dateStr) {
+        console.warn("Undefined date string provided to parseDate.");
+        return { day: 0, month: "January", year: 0 };
     }
+    const [month, day, year] = dateStr.split('/').map(num => parseInt(num, 10));
+    return {
+        day,
+        month: ORIGINAL_MONTH_ORDER[month - 1], // Convert 1-based month to 0-based index
+        year
+    };
+};
+
+function isValidDate(dateStr) {
+    if (typeof dateStr !== "string") return false;
+
+    const [month, day, year] = dateStr.split('/').map(num => parseInt(num, 10));
+
+    // Check the year, month, and day
+    if (isNaN(year) || year < 1900 || year > 2100) return false;
+    if (isNaN(month) || month < 1 || month > 12) return false;
+    if (isNaN(day) || day < 1 || day > 31) return false;
+
+    const date = new Date(year, month - 1, day); // month is 0-indexed
+    return date.getFullYear() === year && date.getMonth() === month - 1 && date.getDate() === day;
 }
 
-function sortMonthYearKeys(a, b) {
-    // Extract years from the keys
-    let yearA = parseInt(a.split(' ')[1]);
-    let yearB = parseInt(b.split(' ')[1]);
-
-    // If years are different, compare by year
-    if (yearA !== yearB) {
-        return yearA - yearB;
-    }
-
-    // If years are the same, compare by month
-    let monthA = a.split(' ')[0];
-    let monthB = b.split(' ')[0];
-
+const sortMonthYearKeys = (a, b) => {
+    const [monthA, yearA = null] = a.split(' - ');
+    const [monthB, yearB = null] = b.split(' - ');
+    if (yearA !== yearB) return (yearA || 0) - (yearB || 0);
     return ORIGINAL_MONTH_ORDER.indexOf(monthA) - ORIGINAL_MONTH_ORDER.indexOf(monthB);
-}
+};
 
-function eventToEpoch(event) {
-    return new Date(event.year, ORIGINAL_MONTH_ORDER.indexOf(event.month), event.day).getTime();
-}
+const eventToEpoch = event => {
+    const { day, month, year } = parseDate(event.date);
+    return new Date(year, ORIGINAL_MONTH_ORDER.indexOf(month), day + 1).getTime();
+};
 
 fetch(URL)
     .then(response => response.json())
     .then(data => {
-        const listOfDicts = convertSheetDataToListOfDicts(data);
-        console.log(listOfDicts);
-        // renderDataAsTable(listOfDicts);
-        displayEventsByMonth(listOfDicts);
+        const events = convertSheetDataToListOfDicts(data);
+        displayEventsByMonth(events);
     })
     .catch(error => console.error('Error fetching data:', error));
