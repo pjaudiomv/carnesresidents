@@ -47,24 +47,27 @@ const displayEventsByMonth = events => {
 
         const ul = document.createElement('ul');
         let previousEventDay = null;
+        let processedInfoDays = new Set();
 
         groupedEvents[monthYearKey].forEach(event => {
             const { day } = parseDate(event.date);
             let info = event.info?.trim() ? ` (${event.info})` : ''
 
-            if (previousEventDay && (day - previousEventDay > 2)) {
-                const pBefore = document.createElement('p');
+            if (previousEventDay && (day - previousEventDay >= 1    )) {
                 const hr = document.createElement('hr');
+                const div = document.createElement('div');
                 hr.className = 'weeks-hr';
-                const pAfter = document.createElement('p');
-                ul.appendChild(pBefore);
                 ul.appendChild(hr);
-                pAfter.innerHTML = info;
-                ul.appendChild(pAfter);
+                if (!processedInfoDays.has(day) && event.info && event.info.trim() !== "") {
+                    div.innerHTML = info;
+                    processedInfoDays.add(day);
+                }
+                ul.appendChild(div);
+
             }
 
             const li = document.createElement('li');
-            li.innerHTML = event.url?.trim() ? `${day} - <a href="${event.url}" target="_blank">${event.name}</a> ${info}` : `${day} - ${event.name} ${info}`;
+            li.innerHTML = event.url?.trim() ? `${day} - <a href="${event.url}" target="_blank">${event.name}</a>` : `${day} - ${event.name}`;
             ul.appendChild(li);
 
             previousEventDay = day;
