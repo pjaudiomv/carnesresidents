@@ -57,52 +57,6 @@ function convertSheetDataToListOfDicts(sheetData) {
     });
 }
 
-
-var events = [
-    {
-        id: "4",
-        name: "Event Four",
-        month: "March",
-        day: 12,
-        year: 2024
-    },
-    {
-        id: "2",
-        name: "Event Two <em>(Special)</em>",
-        month: "January",
-        day: 10,
-        year: 2024
-    },
-    {
-        id: "3",
-        name: "Event <a href='#'>Three</a>",
-        month: "February",
-        day: 1,
-        year: 2023
-    },
-    {
-        id: "1",
-        name: "<strong>Event One</strong>",
-        month: "January",
-        day: 22,
-        year: 2023
-    },
-    {
-        id: "1",
-        name: "<strong>Event One</strong>",
-        month: "October",
-        day: 6,
-        year: 2023
-    },
-    {
-        id: "1",
-        name: "<strong>Event One</strong>",
-        month: "October",
-        day: 12,
-        year: 2023
-    }
-];
-
 const ORIGINAL_MONTH_ORDER = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function displayEventsByMonth(events) {
@@ -126,7 +80,7 @@ function displayEventsByMonth(events) {
     // Group by month and year
     var groupedEvents = {};
     events.forEach(event => {
-        if (eventToEpoch(event) <= currentEpoch) {
+        if (eventToEpoch(event) < currentEpoch) {
             return; // Don't display past events
         }
 
