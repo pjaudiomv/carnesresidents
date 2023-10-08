@@ -62,7 +62,8 @@ const displayEventsByMonth = events => {
             }
 
             const li = document.createElement('li');
-            li.innerHTML = event.url?.trim() ? `${day} - <a href="${event.url}" target="_blank">${event.name}</a>` : `${day} - ${event.name}`;
+            let info = event.info?.trim() ? ` (${event.info})` : ''
+            li.innerHTML = event.url?.trim() ? `${day} - <a href="${event.url}" target="_blank">${event.name}</a> ${info}` : `${day} - ${event.name} ${info}`;
             ul.appendChild(li);
 
             previousEventDay = day;
