@@ -62,6 +62,15 @@ const ordinalSuffix = num => {
     return num + "<sup>th</sup>";
 }
 
+const isValidURL = str => {
+    try {
+        new URL(str);
+        return true;
+    } catch (_) {
+        return false;
+    }
+}
+
 const displayEventsByMonth = events => {
     const currentEpoch = Date.now();
     const currentYear = new Date().getFullYear();
@@ -95,7 +104,7 @@ const displayEventsByMonth = events => {
         groupedEvents[monthYearKey].forEach(event => {
             const { day } = parseDate(event.date);
             let info = event.info?.trim() ? ` (${event.info})` : '';
-            const eventLink = event.url?.trim() ? `<a href="${event.url}" target="_blank">${event.name}</a>` : event.name;
+            const eventLink = event.url?.trim() && isValidURL(event.url) ? `<a href="${event.url}" target="_blank">${event.name}</a>` : event.name;
 
             if (previousEventDay !== day) {
                 const dayLi = document.createElement('li');
