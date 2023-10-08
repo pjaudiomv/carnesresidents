@@ -50,19 +50,20 @@ const displayEventsByMonth = events => {
 
         groupedEvents[monthYearKey].forEach(event => {
             const { day } = parseDate(event.date);
+            let info = event.info?.trim() ? ` (${event.info})` : ''
 
-            if (previousEventDay && (day - previousEventDay > 6)) {
+            if (previousEventDay && (day - previousEventDay > 2)) {
                 const pBefore = document.createElement('p');
                 const hr = document.createElement('hr');
                 hr.className = 'weeks-hr';
                 const pAfter = document.createElement('p');
                 ul.appendChild(pBefore);
                 ul.appendChild(hr);
+                pAfter.innerHTML = info;
                 ul.appendChild(pAfter);
             }
 
             const li = document.createElement('li');
-            let info = event.info?.trim() ? ` (${event.info})` : ''
             li.innerHTML = event.url?.trim() ? `${day} - <a href="${event.url}" target="_blank">${event.name}</a> ${info}` : `${day} - ${event.name} ${info}`;
             ul.appendChild(li);
 
