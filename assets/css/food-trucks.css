@@ -4,3 +4,29 @@
     border-bottom: solid 2px #fff;
     margin: 1em 0;
 }
+
+ol.circle-bullets {
+    list-style-type: none;
+    /*counter-reset: none;*/
+}
+
+/*ol.circle-bullets > li::before {*/
+/*    list-style-type: circle;*/
+/*    position: relative;*/
+/*    left: -1em;*/
+/*    padding-right: 0.1em;*/
+/*}*/
+
+ol.circle-bullets-inner {
+    list-style-type: disc;
+    padding-left: 2em;
+    /*counter-reset: none;*/
+}
+
+/*ol.circle-bullets-inner > li::before {*/
+/*    list-style-type: disc;*/
+/*    position: relative;*/
+/*    left: -1em;*/
+/*    padding-right: 0.1em;*/
+/*}*/
+

@@ -47,6 +47,21 @@ const createGroupedEvents = (validEvents, currentEpoch, currentYear) =>
         return acc;
     }, {});
 
+const ordinalSuffix = num => {
+    const j = num % 10,
+        k = num % 100;
+    if (j === 1 && k !== 11) {
+        return num + "<sup>st</sup>";
+    }
+    if (j === 2 && k !== 12) {
+        return num + "<sup>nd</sup>";
+    }
+    if (j === 3 && k !== 13) {
+        return num + "<sup>rd</sup>";
+    }
+    return num + "<sup>th</sup>";
+}
+
 const displayEventsByMonth = events => {
     const currentEpoch = Date.now();
     const currentYear = new Date().getFullYear();
@@ -64,40 +79,56 @@ const displayEventsByMonth = events => {
     const eventGroups = document.getElementById('eventGroups');
 
     Object.keys(groupedEvents).sort(sortMonthYearKeys).forEach(monthYearKey => {
-        let month = monthYearKey.split(' ')[0]
-        let year = monthYearKey.split(' ')[2]
+        const month = monthYearKey.split(' ')[0];
+        const year = monthYearKey.split(' ')[2];
         const monthDiv = document.createElement('div');
         const monthHeading = document.createElement('h2');
         monthHeading.textContent = `${getMonthNameFromNumber(month)} ${year > currentYear ? `- ${year}` : ""}`;
         monthDiv.appendChild(monthHeading);
 
         const ul = document.createElement('ul');
+        const daysOl = document.createElement('ol');
+        daysOl.className = 'circle-bullets';
         let previousEventDay = null;
         let processedInfoDays = new Set();
 
         groupedEvents[monthYearKey].forEach(event => {
-            const { day, month, year } = parseDate(event.date);
+            const { day } = parseDate(event.date);
             let info = event.info?.trim() ? ` (${event.info})` : '';
             const eventLink = event.url?.trim() ? `<a href="${event.url}" target="_blank">${event.name}</a>` : event.name;
 
-            if (previousEventDay && (day - previousEventDay >= 1)) {
-                const hr = document.createElement('hr')
-                hr.className = 'weeks-hr';
-                ul.appendChild(hr);
+            if (previousEventDay !== day) {
+                const dayLi = document.createElement('li');
                 if (!processedInfoDays.has(day) && info) {
-                    ul.appendChild(document.createElement('div')).innerHTML = info;
+                    dayLi.innerHTML = `${ordinalSuffix(day)} - ${info}`;
                     processedInfoDays.add(day);
+                } else {
+                    dayLi.innerHTML = ordinalSuffix(day);
                 }
+                daysOl.appendChild(dayLi);
+
+                const eventsOl = document.createElement('ol');
+                eventsOl.className = 'circle-bullets-inner';
+                dayLi.appendChild(eventsOl);
+
+                const eventLi = document.createElement('li');
+                eventLi.innerHTML = eventLink;
+                eventsOl.appendChild(eventLi);
+            } else {
+                const eventsOl = daysOl.lastChild.lastChild;
+                const eventLi = document.createElement('li');
+                eventLi.innerHTML = eventLink;
+                eventsOl.appendChild(eventLi);
             }
 
-            ul.appendChild(document.createElement('li')).innerHTML = `${day} - ${eventLink}`;
             previousEventDay = day;
         });
 
-        monthDiv.appendChild(ul);
+        monthDiv.appendChild(daysOl);
         eventGroups.appendChild(monthDiv);
     });
 };
+
 
 fetch(CONFIG.URL)
     .then(response => response.json())

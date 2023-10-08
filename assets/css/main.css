@@ -2136,7 +2136,7 @@ input, select, textarea {
 /* List */
 
 	ol {
-		list-style: decimal;
+		list-style: z;
 		margin: 0 0 2em 0;
 		padding-left: 1.25em;
 	}
