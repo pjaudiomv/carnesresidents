@@ -1,5 +1,6 @@
 .idea
-scratch.txt
-node_modules/
 build/
+node_modules/
 pages/
+scratch.txt
+vars.env

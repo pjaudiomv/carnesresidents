@@ -20,11 +20,15 @@ clean:  ## clean
 
 .PHONY: image-build
 image-build:  ## Builds Docker Image
-	docker build -t carnes-residents:latest .
+	docker build -t carnesresidents:latest .
 
 .PHONY: image-serve
 image-serve:  image-build ## Runs Docker Image
-	docker run -it --rm --init -p 8000:8000 carnes-residents:latest
+	docker run -it --rm --init -p 8000:8000 carnesresidents:latest
+
+.PHONY: image-exec
+image-exec:  image-build ## Runs Docker Exec
+	docker run -it carnesresidents:latest /bin/sh
 
 .PHONY: serve
 serve:  ## serve

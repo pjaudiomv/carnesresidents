@@ -1,0 +1,9 @@
+repos:
+-   repo: local
+    hooks:
+      -   id: check-for-string
+          name: Check for disallowed
+          entry: .github/scripts/check.sh
+          language: script
+          files: '.*'
+          exclude: '\.sh$'
