@@ -1,0 +1,17 @@
+.editorconfig
+.gitattributes
+.gitignore
+.eslintrc.json
+.dockerignore
+.DS_Store
+README.md
+package.json
+package-lock.json
+Dockerfile
+docker-compose.yml
+Makefile
+/.git
+/.idea
+/.github
+/node_modules
+/build
