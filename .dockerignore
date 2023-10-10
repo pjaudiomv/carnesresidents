@@ -15,3 +15,4 @@ Makefile
 /.github
 /node_modules
 /build
+/pages

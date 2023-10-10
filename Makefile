@@ -10,6 +10,10 @@ build:  ## Build
 	git archive --format=zip --output=${ZIP_FILENAME} $(COMMIT)
 	mkdir -p ${BUILD_DIR} && mv ${ZIP_FILENAME} ${BUILD_DIR}
 
+.PHONY: pages
+pages:  ## Preps GitHub Pages Deploy
+	mkdir -p pages && unzip ${BUILD_DIR}/${ZIP_FILENAME} -d pages
+
 .PHONY: clean
 clean:  ## clean
 	rm -rf ${BUILD_DIR}

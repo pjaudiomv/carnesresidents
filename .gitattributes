@@ -12,3 +12,4 @@ Makefile export-ignore
 /.github export-ignore
 /node_modules export-ignore
 /build export-ignore
+/pages export-ignore
