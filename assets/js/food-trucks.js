@@ -53,6 +53,18 @@ const ordinalSuffix = (num) => {
   return `${num}<sup>th</sup>`;
 };
 
+const generateEventName = (event) => {
+  if (event.url?.trim() && isValidURL(event.url)) {
+    return `<a href="${event.url}" target="_blank">${event.name}</a>${
+      event.truck_info ? ` (${event.truck_info})` : ""
+    }`;
+  } else {
+    return event.truck_info
+      ? `${event.name} (${event.truck_info})`
+      : event.name;
+  }
+};
+
 const displayEventsByMonth = (events) => {
   const currentEpoch = Date.now();
   const currentYear = new Date().getFullYear();
@@ -102,13 +114,7 @@ const displayEventsByMonth = (events) => {
     groupedEvents[monthYearKey].forEach((event) => {
       const { day } = parseDate(event.date);
       const info = event.event_info?.trim() ? ` (${event.event_info})` : "";
-      const appendTruckInfo = (name, truckInfo) => {
-        return truckInfo ? `${name} (${truckInfo})` : name;
-      };
-      const eventNameWithTruckInfo = appendTruckInfo(event.name, event.truck_info);
-      const eventLink = event.url?.trim() && isValidURL(event.url)
-        ? `<a href="${event.url}" target="_blank">${event.name}</a> ${event.truck_info ? `(${event.truck_info})` : ''}`
-        : eventNameWithTruckInfo;
+      const eventName = generateEventName(event);
 
       if (previousEventDay !== day) {
         const dayLi = document.createElement("li");
@@ -123,12 +129,12 @@ const displayEventsByMonth = (events) => {
         eventsOl.className = "circle-bullets-inner";
         dayLi.appendChild(eventsOl);
         const eventLi = document.createElement("li");
-        eventLi.innerHTML = eventLink;
+        eventLi.innerHTML = eventName;
         eventsOl.appendChild(eventLi);
       } else {
         const eventsOl = daysOl.lastChild.lastChild;
         const eventLi = document.createElement("li");
-        eventLi.innerHTML = eventLink;
+        eventLi.innerHTML = eventName;
         eventsOl.appendChild(eventLi);
       }
 
