@@ -101,11 +101,14 @@ const displayEventsByMonth = (events) => {
 
     groupedEvents[monthYearKey].forEach((event) => {
       const { day } = parseDate(event.date);
-      const info = event.info?.trim() ? ` (${event.info})` : "";
-      const eventLink =
-        event.url?.trim() && isValidURL(event.url)
-          ? `<a href="${event.url}" target="_blank">${event.name}</a>`
-          : event.name;
+      const info = event.event_info?.trim() ? ` (${event.event_info})` : "";
+      const appendTruckInfo = (name, truckInfo) => {
+        return truckInfo ? `${name} (${truckInfo})` : name;
+      };
+      const eventNameWithTruckInfo = appendTruckInfo(event.name, event.truck_info);
+      const eventLink = event.url?.trim() && isValidURL(event.url)
+        ? `<a href="${event.url}" target="_blank">${event.name}</a> ${event.truck_info ? `(${event.truck_info})` : ''}`
+        : eventNameWithTruckInfo;
 
       if (previousEventDay !== day) {
         const dayLi = document.createElement("li");
