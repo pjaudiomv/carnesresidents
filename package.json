@@ -2,7 +2,7 @@
   "name": "carnes-residents",
   "scripts": {
     "lint": "npx eslint assets/js/food-trucks.js",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "npm run lint assets/js/food-trucks.js --fix",
     "prettier": "npx prettier assets/js --check",
     "prettier:fix": "npm run prettier assets/js --write"
   },
