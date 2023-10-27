@@ -21,7 +21,12 @@ const parseDate = (dateStr) => {
   return { month, day, year };
 };
 
-const eventToEpoch = (event) => new Date(event.date).getTime();
+function isDateInFuture(dateStr) {
+  const parsed = parseDate(dateStr);
+  const providedDate = new Date(parsed.year, parsed.month - 1, parsed.day + 1); // Months are 0-indexed, pad 1 day
+  const currentDate = new Date();
+  return providedDate < currentDate;
+}
 
 const isValidDate = (dateStr) => {
   const parsed = parseDate(dateStr);
@@ -67,7 +72,6 @@ const generateEventName = (event) => {
 };
 
 const displayEventsByMonth = (events) => {
-  const currentEpoch = Date.now();
   const currentYear = new Date().getFullYear();
   const validEvents = events.filter(
     (event) =>
@@ -88,8 +92,7 @@ const displayEventsByMonth = (events) => {
   });
 
   const groupedEvents = validEvents.reduce((acc, event) => {
-    if (!CONFIG.SHOW_PASSED_EVENTS && eventToEpoch(event) < currentEpoch)
-      return acc;
+    if (!CONFIG.SHOW_PASSED_EVENTS && isDateInFuture(event.date)) return acc;
     const { month, year } = parseDate(event.date);
     const key = `${month} - ${year}`;
     acc[key] = acc[key] || [];
@@ -100,7 +103,7 @@ const displayEventsByMonth = (events) => {
   const eventGroups = document.getElementById("eventGroups");
 
   Object.keys(groupedEvents).forEach((monthYearKey) => {
-    const [month, , year] = monthYearKey.split(" ");
+    const [month, year] = monthYearKey.split(" ");
     const monthDiv = document.createElement("div");
     const monthHeading = document.createElement("h2");
     monthHeading.textContent = `${getMonthNameFromNumber(month)} ${
