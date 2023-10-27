@@ -5,6 +5,7 @@ const CONFIG = {
   get URL() {
     return `https://sheets.googleapis.com/v4/spreadsheets/${this.SHEET_ID}/values/${this.SHEET_NAME}?key=${this.API_KEY}`;
   },
+  SHOW_PASSED_EVENTS: false,
 };
 
 const convertSheetDataToListOfDicts = (sheetData) => {
@@ -17,10 +18,10 @@ const convertSheetDataToListOfDicts = (sheetData) => {
 
 const parseDate = (dateStr) => {
   const [month, day, year] = dateStr.split("/").map(Number);
-  return { day, month, year };
+  return { month, day, year };
 };
 
-const eventToEpoch = (event) => new Date(parseDate(event.date)).getTime();
+const eventToEpoch = (event) => new Date(event.date).getTime();
 
 const isValidDate = (dateStr) => {
   const parsed = parseDate(dateStr);
@@ -87,7 +88,8 @@ const displayEventsByMonth = (events) => {
   });
 
   const groupedEvents = validEvents.reduce((acc, event) => {
-    if (eventToEpoch(event) < currentEpoch) return acc;
+    if (!CONFIG.SHOW_PASSED_EVENTS && eventToEpoch(event) < currentEpoch)
+      return acc;
     const { month, year } = parseDate(event.date);
     const key = `${month} - ${year}`;
     acc[key] = acc[key] || [];
