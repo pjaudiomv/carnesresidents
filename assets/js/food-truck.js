@@ -21,13 +21,6 @@ const parseDate = (dateStr) => {
   return { month, day, year };
 };
 
-function isDateInFuture(dateStr) {
-  const parsed = parseDate(dateStr);
-  const providedDate = new Date(parsed.year, parsed.month - 1, parsed.day + 1); // Months are 0-indexed, pad 1 day
-  const currentDate = new Date();
-  return providedDate < currentDate;
-}
-
 const isValidDate = (dateStr) => {
   const parsed = parseDate(dateStr);
   const date = new Date(parsed.year, parsed.month - 1, parsed.day);
@@ -92,7 +85,9 @@ const displayEventsByMonth = (events) => {
   });
 
   const groupedEvents = validEvents.reduce((acc, event) => {
-    if (!CONFIG.SHOW_PASSED_EVENTS && isDateInFuture(event.date)) return acc;
+    let currentDate = new Date();
+    let eventDate = new Date(event.date);
+    if (!CONFIG.SHOW_PASSED_EVENTS && eventDate <= currentDate) return acc;
     const { month, year } = parseDate(event.date);
     const key = `${month} - ${year}`;
     acc[key] = acc[key] || [];
