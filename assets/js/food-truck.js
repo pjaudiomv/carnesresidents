@@ -85,9 +85,11 @@ const displayEventsByMonth = (events) => {
   });
 
   const groupedEvents = validEvents.reduce((acc, event) => {
+
     let currentDate = new Date();
+    currentDate.setDate(currentDate.getDate() - 1);
     let eventDate = new Date(event.date);
-    if (!CONFIG.SHOW_PASSED_EVENTS && eventDate <= currentDate) return acc;
+    if (!CONFIG.SHOW_PASSED_EVENTS && eventDate < currentDate) return acc;
     const { month, year } = parseDate(event.date);
     const key = `${month} - ${year}`;
     acc[key] = acc[key] || [];
