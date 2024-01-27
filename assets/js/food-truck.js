@@ -85,7 +85,6 @@ const displayEventsByMonth = (events) => {
   });
 
   const groupedEvents = validEvents.reduce((acc, event) => {
-
     let currentDate = new Date();
     currentDate.setDate(currentDate.getDate() - 1);
     let eventDate = new Date(event.date);
